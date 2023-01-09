@@ -1,6 +1,7 @@
 package com.kw.board.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,4 +23,12 @@ public class AuthController {
 	public ResponseDto<LoginDto> login(@RequestBody AuthPostDto requestBody) {
 		return authService.login(requestBody);
 	}
+	
+	@GetMapping("")
+	public String hello() {
+		return authService.hello();
+	}
+	
+	/////////////////////////////////////////////////////////
+	
 }
